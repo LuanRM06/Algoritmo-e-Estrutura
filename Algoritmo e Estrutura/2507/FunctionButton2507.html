@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="calcTriangulo();">Triangulo</button>
+    <button onclick="calcTrapezio();">Trapezio</button>
+    <button onclick="calcCirculo();">Circulo</button>
+    <button onclick="calcQua();"> Quadrado</button>
+
+    <script>
+        function calcTriangulo() {
+          let baseT = parseFloat(prompt("Informe a base do triângulo."));
+          let alturaT = parseFloat(prompt("informe a altura do triangulo."));
+          let areaTri = (baseT * alturaT) / 2;
+          window.alert(`A área do triângulo é ${areaTri}`);
+        }
+  
+        function calcTrapezio() {
+          let baseMaior = parseFloat(prompt("Informe a base maior do trápezio."));
+          let baseMenor = parseFloat(prompt("informe a base menor do trapézio."));
+          let alturaTra = parseFloat(prompt("informe a altura do trapézio."));
+          let areaTra = ((baseMaior + baseMenor) / 2) * alturaTra;
+          window.alert(`A área do trapézio é ${areaTra}`);
+        }
+        function calcCirculo() {
+          let raio = parseFloat(prompt("Informe o raio do círculo."));
+          let areaCir = Math.PI * raio ** 2;
+          window.alert(`A área do círculo é ${areaCir}`);
+        }
+        function calcQua() {
+          let ladoQ = parseFloat(prompt("Informe o lado do Quadrado."));
+          let areaqua = ladoQ ** 2;
+          window.alert(`A área do quadrado é: ${areaqua}`);
+        }
+       </script>
+    
+</body>
+</html>

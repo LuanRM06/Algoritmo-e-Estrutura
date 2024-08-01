@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="buttons.html">
+  </head>
+  <body>
+    <form>
+      <h1>Calculadora de Idade</h1>
+      <h3>Ano de nascimento</h3>
+      <input type="number" placeholder="Informe o ano de nascimento" id="N1" />
+      <h3>Ano Atual</h3>
+      <input type="number" placeholder="Informe o ano atual." id="N2" />
+      <input type="submit" onclick="CalcIdade(); return false" />
+      
+    </form>
+    <script>
+      function CalcIdade() {
+        var n1 = parseInt(document.getElementById("N1").value);
+        var n2 = parseInt(document.getElementById("N2").value);
+        var idade = n2 - n1;
+        if (idade >= 0) {
+          window.alert(`A idade de quem nasceu em ${n1} é ${idade}.`);
+        } else {
+          window.alert(`Idade inválida.`);
+        }
+      }
+      function GoBack(){
+        location.href="buttons.html";
+      }
+    </script>
+    <h3>Voltar</h3>
+    <button onclick="GoBack()">Voltar</button>
+  </body>
+</html>
