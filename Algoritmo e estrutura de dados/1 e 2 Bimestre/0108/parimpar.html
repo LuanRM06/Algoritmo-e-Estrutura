@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="buttons.html">
+  </head>
+  <body>
+    <form>
+      <h1>O número é Par ou impar</h1>
+      <h3>Número</h3>
+      <input type="number" placeholder="Informe um número" id="N1" />
+      <input type="submit" onclick="ParImpar(); return false" />
+    </form>
+    <script>
+      function ParImpar() {
+        var n1 = document.getElementById("N1").value;
+        if (n1 % 2 == 1) {
+          window.alert(`O número ${n1} é impar`);
+        } else {
+          window.alert(`O número ${n1} é par`);
+        }
+      }
+      function GoBack(){
+        location.href="buttons.html"
+      }
+    </script>
+          <h3>Voltar</h3>
+          <button onclick="GoBack()">Voltar</button>
+  </body>
+</html>

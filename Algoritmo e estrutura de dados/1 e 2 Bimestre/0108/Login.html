@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="buttons.html">
+  </head>
+  <body>
+    <form>
+      <h3>Login</h3>
+      <input type="text" placeholder="Login" id="Login" />
+      <h3>Senha</h3>
+      <input type="password" placeholder="Senha" id="Senha" />
+      <input type="submit" onclick="login(); return false" />
+
+    </form>
+    <script>
+      function login() {
+        var login = document.getElementById("Login").value;
+        var senha = document.getElementById("Senha").value;
+        if (login == "luan" && senha == "123") {
+          window.alert("Sucesso!");
+          location.href = "buttons.html";
+        } else {
+          window.alert("Login ou senha incorretos");
+        }
+      }
+    </script>
+  </body>
+</html>

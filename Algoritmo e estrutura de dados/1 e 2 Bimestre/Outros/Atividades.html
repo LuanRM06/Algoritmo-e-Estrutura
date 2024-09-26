@@ -1,0 +1,51 @@
+Luan Ramalho Mantovani
+----------------------------
+Estrutura de repetição for 
+----------------------------
+<script>
+    let numero = parseInt(prompt("Informe um número para ser calculado seu fatorial."))
+    let total = 1
+    for (numero; numero>0; numero -=1){
+        total= total*numero
+    }
+    window.alert(`O fatorial é: ${total}`)
+</script>
+----------------------------
+<script>
+    let jogadores = parseInt(prompt("Quantos jogadores tem um time de vôlei."))
+    let altura = 0
+    let alturatotal = 0
+    let media = 0
+    let totalj = jogadores
+    for (jogadores; jogadores > 0; jogadores -= 1) {
+        altura = parseInt(prompt("Qual a altura do jogador?"))
+        alturatotal = alturatotal + altura
+    }
+    media = alturatotal / totalj
+    window.alert(`A média da altura dos jogadores é ${media}`)
+
+</script>
+----------------------------
+<script>
+    let num = parseInt(prompt("Informe um número para exibir a tabuada dele."))
+    for(let tab = 10; tab>0; tab -= 1){
+        mult = num*tab
+        window.alert (`${num} * ${tab} = ${mult}`)
+    }
+</script>
+----------------------------
+<script>
+    let parcela = 0
+    let valor = parseFloat(prompt("Informe o valor das compras."))
+    for (let cont = 1; cont <= 10; cont++) {
+        if (cont > 5) {
+            parcela = (valor + valor * 0.287) / cont
+            window.alert(`Podem ser ${cont} parcelas de R$${parcela}`)
+        }
+        else {
+            parcela = valor / cont
+            window.alert(`Podem ser ${cont} parcelas de R$${parcela}`)
+        }
+    }
+</script>
+----------------------------

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let valor = parseFloat(prompt("digite o valor da compra"));
+      for (let cont = 1; cont <= 10; cont++) {
+        if (cont > 5) {
+          let parc = valor + valor * 0.287;
+          window.alert(`serão ${cont}x de ${parc / cont}`);
+        } else {
+          window.alert(`serão ${cont}x de ${valor / cont}`);
+        }
+      }
+    </script>
+  </body>
+</html>

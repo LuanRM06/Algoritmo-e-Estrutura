@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let quantidade = parseInt(
+        prompt("Informe a quantidade de jogadores do time")
+      );
+      let tot = 0;
+      for (let cont = 0; cont < quantidade; cont++) {
+        let altura = parseFloat(prompt("Informe a altura do jogador: "));
+        tot += altura;
+      }
+      let med = tot / quantidade;
+      window.alert(`A altura média do time é de: ${med}m.`);
+    </script>
+  </body>
+</html>

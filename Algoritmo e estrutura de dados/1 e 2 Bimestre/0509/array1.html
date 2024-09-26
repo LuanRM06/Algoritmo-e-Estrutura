@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Matrizes</h1>
+    <h2>Método at</h2>
+    <p id="demo">=</p>
+    <p id="demo2">==</p>
+    <button onclick="nossa()">clique aqui</button>
+    <p>escolha um número de 0 a 6</p>
+    <input type="number" id="numero"></body>
+    <script>
+        //*array
+        const cars = ["Uno ", "Peugeot 206 ", "Feraririri ", "lambargambarg ", "bagatata ", "koenigsegg ", "Maserrati "]
+
+        //* função para o botão puxar o valor do input e exibir o elemento do array de acordo com esse valor
+   function nossa(){ 
+    let i = document.getElementById("numero").value;
+    let car = cars.at(i);
+    document.getElementById("demo").innerHTML=car;
+   }
+   //*lista do array
+   let list = cars.entries();
+   let text = "";
+   for (let x of list){
+    text += x + "<br>";
+   }
+   document.getElementById("demo2").innerHTML = text;
+    </script>
+<p>arquivo com (at), (for) e (entries)</p>
+</body>
+</html>
