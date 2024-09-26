@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h4>Um cliente de supermercado fez uma compra de 20 itens. Leia o preço
+        de cada item e calcule o total que a pessoa vai pagar.</h4>
+    <form>
+        <label>Informe o valor do item.</label><br>
+        <input type="number" id="valor"><br>
+        <button id="Adicionar">Adicionar</button>
+        <button id="Calcular">Calcular</button>
+    </form>
+
+    <p id="lista"></p>
+
+    <script>
+        let compras = [];
+
+        document.getElementById("Adicionar").onclick = function () {event.preventDefault()
+            let val = parseFloat(document.getElementById("valor").value);
+            compras.push(val)
+        }
+
+        document.getElementById("Calcular").onclick = function () {event.preventDefault()
+            if (compras.length > 0 && compras.length < 20) {
+                let soma = 0
+                for (let i = 0; i < compras.length; i++) {
+                    soma += compras[i]
+                }
+                document.getElementById("lista").innerHTML = "Os valores Inseridos foram: <br> R$" + compras.join(". <br> R$") + ".<br> E a soma foi: R$" + soma;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

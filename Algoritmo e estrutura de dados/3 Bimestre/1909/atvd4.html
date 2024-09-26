@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h4>4. Leia a quantidade de alunos existentes em uma sala de aula e para cada
+        aluno, leia a sua média final. Ao final, escreva a quantidade de alunos que
+        foi aprovada por média (o aluno é aprovado por média se sua média final
+        for maior ou igual a 6,0).</h4>
+    <form>
+        <label>Informe a quantidade de alunos da turma:</label><br>
+        <input type="number" id="qntd"><br>
+        <button id="EnviarQNTD">Enviar</button>
+        <label>Insira sucessivamente a nota de cada aluno:</label><br>
+        <input type="number" id="nota"><br>
+        <button id="EnviarNota">Enviar Nota</button>
+        <button id="exibir">Exibir Aprovados</button>
+    </form>
+    <p id="aprovados"></p>
+
+    <script>
+        let notas = [];
+        let NumAlunos = 0;
+
+        document.getElementById("EnviarQNTD").onclick = function () { event.preventDefault();
+            NumAlunos = parseInt(document.getElementById("qntd").value);
+        }
+
+        document.getElementById("EnviarNota").onclick = function () { event.preventDefault();
+            let nota = parseFloat(document.getElementById("nota").value);
+            if (nota >=0 && notas.length < NumAlunos) {
+                notas.push(nota);
+                document.getElementById("nota").value = "";
+            } else {
+                window.alert("Nota inválida ou Limite atingido.");
+            }
+        }
+
+        document.getElementById("exibir").onclick = function () {event.preventDefault();
+            let aprovados = notas.filter(nota => nota >= 6.0);
+            document.getElementById("aprovados").innerHTML = "Quantidade de alunos aprovados: " + aprovados.length;
+        }
+    </script>
+</body>
+
+</html>

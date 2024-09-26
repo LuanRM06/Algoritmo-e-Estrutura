@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>20 Maior</title>
+  </head>
+  <body>
+    <h1>Ler 20 números fornecidos pelo usúario e exibir qual é o maior.</h1>
+    <form>
+      <label> Informe um número:</label><br />
+      <input type="number" id="recebedor" /><br />
+      <button type="button" id="armazem">Armazenar</button>
+      <button type="button" id="encontrarmaior">Encontrar o Maior Número</button>
+    </form>
+   
+    <p id="resultado"></p>
+
+    <script>
+      let numeros = [];
+
+      document.getElementById("armazem").onclick = function (){
+      let recebedor = parseFloat(document.getElementById("recebedor").value);
+      numeros.push(recebedor);
+      }
+
+      document.getElementById("encontrarmaior").onclick = function (){
+        if (numeros.length > 0 && numeros.length < 20) {
+          let maiornumero = numeros[0];
+          for (let i = 1; i < numeros.length; i++) {
+            if (numeros[i] > maiornumero) {
+              maiornumero = numeros[i];
+            }
+          }
+          document.getElementById("resultado").innerText = "Os números digitados foram: " + numeros.join (", ") + " O maior número digitado foi:" + maiornumero;
+        }
+      }
+    </script>
+  </body>
+</html>
