@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let n1 = parseFloat(prompt("qual é o valor total"))
+        let n2 = parseInt(prompt("informe o código sendo: 1 cliente comum, 2 funcionario, 3 cliente vip"))
+
+        switch (n2) {
+
+            case 1:
+                window.alert(n1);
+                break;
+            case 2:
+                window.alert(n1 - (n1 * 0.1));
+                break;
+            case 3:
+                window.alert(n1 - (n1 * 0.05));
+                break;
+
+            default:
+                window.alert("Código inserido inexistente")
+                break
+        }
+    </script>
+</body>
+
+</html>

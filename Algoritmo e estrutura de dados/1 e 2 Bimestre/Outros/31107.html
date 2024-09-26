@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = 1
+        let total25 = 0
+        let total0 = 0
+        let total50 = 0
+        while (num>0){
+            num = prompt("Informe um número.")
+                if (num<25 && num>=0){
+                    total0++
+                }
+                if (num<50 && num>=25){
+                    total25++
+                }
+                if (num>=50){
+                    total50 ++
+                }
+        }
+        window.alert(`${total0} Números são entre 0 e 25`)
+        window.alert(`${total25} Números são entre 25 e 50`)
+        window.alert(`${total50} Números são maiores que 50`)
+    
+    </script>
+    
+</body>
+</html>

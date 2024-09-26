@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let continuar = true
+        while (continuar) {
+            const resposta = prompt("Deseja continuar?(s/n)")
+            if (resposta === "n") {
+                continuar = false
+            }
+        }
+        window.alert("Loop sem váriavel de controle concluído")
+        //O código continuara a ser executado a até o usiario digitar "n"
+    </script>
+
+</body>
+
+</html>

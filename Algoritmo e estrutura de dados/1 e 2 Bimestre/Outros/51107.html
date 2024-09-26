@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>   
+    let cont = 0
+    let login = "0"
+    let senha = "0"
+        while (login!="Luan" && senha!="digital") {
+        login = prompt("Informe seu login.")
+        senha = prompt("Informe sua senha.")
+
+            if (login=="Luan" && senha=="digital"){
+                window.alert ("Login bem sucssçedido.")
+         }
+            else{
+                window.alert("Tente novamente.")
+                cont +=1;
+                window.alert(cont)
+                if (cont==3){
+                    windwo.alert("Senha errada 3X Sistema Bloqueado.")
+                    break;
+                }
+        }
+
+        }
+    </script>
+    
+</body>
+</html>

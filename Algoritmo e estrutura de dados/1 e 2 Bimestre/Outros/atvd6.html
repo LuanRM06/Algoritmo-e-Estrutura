@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let n1 = parseFloat(prompt("Informe um numero"))
+        let n2 = parseFloat(prompt("Informe outro número"))
+        let operacao = prompt("informe o tipo de operação")
+        switch (operacao) {
+
+            case "soma":
+                window.alert(n1 + n2);
+                break;
+            case "subtração":
+                window.alert(n1 - n2);
+                break;
+            case "multiplicação":
+                window.alert(n1 * n2);
+                break;
+            case "dividisão":
+                window.alert(n1 / n2)
+                break;
+            default:
+                window.alert("Operação inválido")
+        }
+    </script>
+
+</body>
+
+</html>
